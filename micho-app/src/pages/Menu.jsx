@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { Helmet } from 'react-helmet-async'
+import SEO from '../components/SEO'
 import { menuData, categories } from '../data/menuData'
 import BookingPrompt from '../components/BookingPrompt'
 import ScrollReveal from '../components/ScrollReveal'
@@ -176,10 +176,11 @@ export default function Menu() {
       transition={{ duration: 0.5 }}
       className="pb-20"
     >
-      <Helmet>
-        <title>Menu | Micho Turkish Bar &amp; Grill Sheffield</title>
-        <meta name="description" content="Explore Micho's full menu: charcoal-grilled kebabs, fresh meze, pide, pizza, desserts and drinks. Premium ingredients, traditional Turkish recipes." />
-      </Helmet>
+      <SEO
+          title="Menu | Micho Turkish Bar &amp; Grill Sheffield"
+          description="Explore Micho's full menu: charcoal-grilled kebabs, fresh meze, pide, pizza, desserts and drinks. Premium ingredients, traditional Turkish recipes."
+          canonical="/menu"
+        />
 
       <ParallaxHero />
 

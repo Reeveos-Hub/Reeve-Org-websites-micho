@@ -110,15 +110,21 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="font-sans text-xs text-text-muted/50">
-            © {new Date().getFullYear()} Micho Turkish Bar &amp; Grill. All rights reserved.
-          </p>
-          <div className="flex gap-6">
-            <span className="font-sans text-xs text-text-muted/50">Sheffield, South Yorkshire</span>
+          {/* Bottom */}
+          <div className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="font-sans text-xs text-text-muted/50">
+              © {new Date().getFullYear()} Micho Turkish Bar &amp; Grill. All rights reserved.
+            </p>
+            <div className="flex gap-6">
+              <span className="font-sans text-xs text-text-muted/50">Sheffield, South Yorkshire</span>
+              <Link
+                to="/sitemap"
+                className="font-sans text-xs text-text-muted/50 hover:text-accent-copper transition-colors duration-200"
+              >
+                Sitemap
+              </Link>
+            </div>
           </div>
-        </div>
       </div>
     </footer>
   )

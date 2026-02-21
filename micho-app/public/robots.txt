@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Allow AI crawlers for AI search visibility
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://micho-restaurant.vercel.app/sitemap.xml

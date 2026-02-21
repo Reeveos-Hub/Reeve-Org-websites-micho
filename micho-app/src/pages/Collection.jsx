@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react'
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion'
-import { Helmet } from 'react-helmet-async'
+import SEO from '../components/SEO'
 import { Link } from 'react-router-dom'
 import { ChevronDown } from 'lucide-react'
 import ScrollReveal from '../components/ScrollReveal'
@@ -162,10 +162,11 @@ export default function Collection() {
       transition={{ duration: 0.3 }}
       className="pb-20"
     >
-      <Helmet>
-        <title>Collection | Micho Turkish Bar &amp; Grill Sheffield</title>
-        <meta name="description" content="Order Micho's authentic Turkish food for collection. Kebab boxes, family platters, pide and more — freshly prepared for takeaway from Crookes, Sheffield." />
-      </Helmet>
+        <SEO
+          title="Collection | Micho Turkish Bar &amp; Grill Sheffield"
+          description="Order Micho's authentic Turkish food for collection. Kebab boxes, family platters, pide and more — freshly prepared for takeaway from Crookes, Sheffield."
+          canonical="/collection"
+        />
 
       {/* Hero */}
         <CollectionHero />

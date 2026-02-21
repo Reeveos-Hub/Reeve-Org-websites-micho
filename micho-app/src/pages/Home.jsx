@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'framer-motion'
-import { Helmet } from 'react-helmet-async'
+import SEO from '../components/SEO'
 import { Link } from 'react-router-dom'
 import BookingPrompt from '../components/BookingPrompt'
 
@@ -126,10 +126,11 @@ export default function Home() {
       transition={{ duration: 0.5 }}
       className="pb-16"
     >
-      <Helmet>
-        <title>Micho Turkish Bar &amp; Grill | Authentic Turkish Dining in Sheffield</title>
-        <meta name="description" content="Authentic Turkish Bar & Grill in Sheffield's Crookes. Charcoal-grilled meats, fresh meze, and 25+ years of culinary heritage. Book your table today." />
-      </Helmet>
+      <SEO
+          title="Micho Turkish Bar & Grill | Authentic Turkish Dining in Sheffield"
+          description="Authentic Turkish Bar & Grill in Sheffield's Crookes. Charcoal-grilled meats, fresh meze, and 25+ years of culinary heritage. Book your table today."
+          canonical="/"
+        />
 
         {/* ─── HERO ─── */}
         <section ref={heroRef} className="relative w-full h-screen min-h-[600px] flex items-center justify-center overflow-hidden">

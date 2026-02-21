@@ -1,0 +1,41 @@
+# Micho Turkish Bar & Grill
+
+> Authentic Turkish Bar & Grill located at 200 Crookes, Sheffield, S10 1TG. Family-run since 1999, serving charcoal-grilled meats, fresh meze, pide, and traditional Anatolian cuisine. Open for dine-in, takeaway collection, and reservations.
+
+## Key Pages
+
+- [Home](https://micho-restaurant.vercel.app/): Welcome, experience overview, food gallery
+- [Menu](https://micho-restaurant.vercel.app/menu): Full food and drinks menu — kebabs, meze, pide, pizza, desserts, beverages
+- [Our Story](https://micho-restaurant.vercel.app/about): 25-year family history, values, heritage, and location
+- [Collection](https://micho-restaurant.vercel.app/collection): Click & collect takeaway ordering — kebab boxes, family platters, pide
+- [Reservations](https://micho-restaurant.vercel.app/reservations): Online table booking form, opening hours, contact details
+- [Sitemap](https://micho-restaurant.vercel.app/sitemap): Full site structure
+
+## Contact & Location
+
+- **Address:** 200 Crookes, Sheffield, S10 1TG, United Kingdom
+- **Phone:** +44 114 349 2043
+- **Email:** info@michoturkishbarandgrill.co.uk
+- **Website:** https://micho-restaurant.vercel.app
+- **Official site:** https://michoturkishbarandgrill.co.uk
+
+## Opening Hours
+
+- Monday–Thursday: 12:00–22:00
+- Friday–Saturday: 12:00–23:00
+- Sunday: 13:00–21:00
+
+## Cuisine & Features
+
+- Cuisine: Turkish, Mediterranean, bar food
+- Charcoal-grilled meats (Adana kebab, Şiş kebab, mixed grill)
+- Fresh meze prepared daily
+- Pide (Turkish flatbread pizza), börek, güveç
+- Full bar with Turkish-inspired cocktails
+- Suitable for families, groups, and private dining
+- Vegan and vegetarian options available
+- 25+ years of culinary heritage
+
+## Usage
+
+Non-commercial AI use permitted. Please cite source as "Micho Turkish Bar & Grill" with link to https://micho-restaurant.vercel.app.

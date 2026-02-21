@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react'
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion'
-import { Helmet } from 'react-helmet-async'
+import SEO from '../components/SEO'
 import { useForm } from 'react-hook-form'
 import { CheckCircle } from 'lucide-react'
 import ScrollReveal from '../components/ScrollReveal'
@@ -118,10 +118,11 @@ export default function Reservations() {
       transition={{ duration: 0.3 }}
       className="pb-20"
     >
-      <Helmet>
-        <title>Reservations | Micho Turkish Bar &amp; Grill Sheffield</title>
-        <meta name="description" content="Book a table at Micho Turkish Bar & Grill in Sheffield. Reserve online or call +44 114 349 2043. Authentic Turkish dining in Crookes, Sheffield." />
-      </Helmet>
+        <SEO
+          title="Reservations | Micho Turkish Bar &amp; Grill Sheffield"
+          description="Book a table at Micho Turkish Bar & Grill in Sheffield. Reserve online or call +44 114 349 2043. Authentic Turkish dining in Crookes, Sheffield."
+          canonical="/reservations"
+        />
 
       {/* Hero */}
         <ReservationsHero />

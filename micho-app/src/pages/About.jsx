@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { Helmet } from 'react-helmet-async'
+import SEO from '../components/SEO'
 import { Link } from 'react-router-dom'
 import ScrollReveal from '../components/ScrollReveal'
 import BookingPrompt from '../components/BookingPrompt'
@@ -79,10 +79,11 @@ export default function About() {
       transition={{ duration: 0.5 }}
       className="pb-20"
     >
-      <Helmet>
-        <title>Our Story | Micho Turkish Bar &amp; Grill Sheffield</title>
-        <meta name="description" content="25 years of authentic Turkish cuisine in Sheffield. Discover the story behind Micho — a family restaurant rooted in Anatolian tradition, craft, and community." />
-      </Helmet>
+      <SEO
+          title="Our Story | Micho Turkish Bar &amp; Grill Sheffield"
+          description="25 years of authentic Turkish cuisine in Sheffield. Discover the story behind Micho — a family restaurant rooted in Anatolian tradition, craft, and community."
+          canonical="/about"
+        />
 
       <ParallaxHero src={IMG_HERO} />
 

@@ -12,6 +12,7 @@ const Menu = lazy(() => import('./pages/Menu'))
 const About = lazy(() => import('./pages/About'))
 const Collection = lazy(() => import('./pages/Collection'))
 const Reservations = lazy(() => import('./pages/Reservations'))
+const Sitemap = lazy(() => import('./pages/Sitemap'))
 
 function PageFallback() {
   return (
@@ -36,7 +37,8 @@ export default function App() {
             <Route path="/menu" element={<Menu />} />
             <Route path="/about" element={<About />} />
             <Route path="/collection" element={<Collection />} />
-            <Route path="/reservations" element={<Reservations />} />
+              <Route path="/reservations" element={<Reservations />} />
+              <Route path="/sitemap" element={<Sitemap />} />
           </Routes>
         </Suspense>
       </AnimatePresence>
