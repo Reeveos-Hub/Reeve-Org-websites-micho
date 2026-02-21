@@ -304,56 +304,94 @@ export default function Home() {
       <ParallaxSection src={IMG_GRILL} alt="Charcoal grill at Micho Turkish Bar & Grill" height="55vw" maxHeight="680px" />
 
       {/* ─── THE EXPERIENCE ─── */}
-      <section className="py-40 px-6">
-        <div className="max-w-[680px] mx-auto text-center">
-          <motion.p
-            className="section-label"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-          >
-            The Experience
-          </motion.p>
-          <div className="mb-16">
-            <AnimatedHeadline
-              text="More than a meal"
-              className="font-serif font-light text-text-primary"
-              delay={0.05}
-            />
-          </div>
+        <section className="py-24 px-6 md:px-12">
+          <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 items-center">
 
-          <div className="flex flex-col gap-10">
-            {[
-              { line: 'Charcoal-grilled over open flame.', num: '01' },
-              { line: 'Freshly prepared from scratch, daily.', num: '02' },
-              { line: '25 years of Turkish culinary heritage.', num: '03' },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                className="relative"
-                initial={{ opacity: 0, x: i % 2 === 0 ? -60 : 60 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: '-40px' }}
-                transition={{ duration: 1.1, delay: i * 0.2, ease: [0.22, 1, 0.36, 1] }}
+            {/* LEFT — video */}
+            <motion.div
+              className="relative overflow-hidden rounded-sm"
+              style={{ aspectRatio: '4/5' }}
+              initial={{ opacity: 0, x: -60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover"
               >
-                <span className="absolute -left-8 top-0 font-sans text-xs text-accent-copper/30 tracking-widest">{item.num}</span>
-                <p className="font-serif italic text-text-primary text-2xl md:text-3xl leading-relaxed">
-                  {item.line}
-                </p>
-                {i < 2 && (
-                  <motion.div
-                    className="w-12 h-px bg-accent-copper/30 mx-auto mt-10"
-                    initial={{ scaleX: 0 }}
-                    whileInView={{ scaleX: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.3 + i * 0.2 }}
-                  />
-                )}
+                <source src="/hero.mp4" type="video/mp4" />
+              </video>
+              {/* subtle vignette overlay */}
+              <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to bottom, transparent 60%, rgba(15,14,12,0.5) 100%)' }} />
+            </motion.div>
+
+            {/* CENTRE — headline + body text */}
+            <div className="text-center md:text-left">
+              <motion.p
+                className="section-label mb-6"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+              >
+                The Experience
+              </motion.p>
+              <div className="mb-8">
+                <AnimatedHeadline
+                  text="More than a meal"
+                  className="font-serif font-light text-text-primary"
+                  delay={0.05}
+                />
+              </div>
+              <motion.p
+                className="font-sans text-text-muted text-base md:text-lg leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              >
+                Every visit to Micho is a journey through Turkey's rich culinary landscape — fire, flavour, and a warmth that lingers long after the last bite.
+              </motion.p>
+              <motion.div
+                className="mt-8"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.9, delay: 0.5 }}
+              >
+                <Link to="/menu" className="btn-copper">Explore the Menu</Link>
               </motion.div>
-            ))}
+            </div>
+
+            {/* RIGHT — numbered statements */}
+            <div className="flex flex-col gap-8">
+              {[
+                { line: 'Charcoal-grilled over open flame.', num: '01' },
+                { line: 'Freshly prepared from scratch, daily.', num: '02' },
+                { line: '25 years of Turkish culinary heritage.', num: '03' },
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  className="flex items-start gap-5 border-b pb-8"
+                  style={{ borderColor: 'rgba(196,122,59,0.12)' }}
+                  initial={{ opacity: 0, x: 60 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: '-40px' }}
+                  transition={{ duration: 1.0, delay: i * 0.18, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  <span className="font-sans text-xs text-accent-copper/40 tracking-widest mt-1 flex-shrink-0">{item.num}</span>
+                  <p className="font-serif italic text-text-primary text-xl md:text-2xl leading-relaxed">
+                    {item.line}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* ─── FOOD GALLERY ─── */}
       <section className="px-4 md:px-8 pb-24">
