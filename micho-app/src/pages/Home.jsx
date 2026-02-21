@@ -131,16 +131,21 @@ export default function Home() {
         <meta name="description" content="Authentic Turkish Bar & Grill in Sheffield's Crookes. Charcoal-grilled meats, fresh meze, and 25+ years of culinary heritage. Book your table today." />
       </Helmet>
 
-      {/* ─── HERO ─── */}
-      <section ref={heroRef} className="relative w-full h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-        <motion.div className="absolute inset-0" style={{ y: heroY, scale: heroScale }}>
-          <img
-            src={HERO_IMG}
-            alt="Micho Turkish Bar & Grill"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(15,14,12,0.3) 0%, rgba(15,14,12,0.5) 40%, rgba(15,14,12,0.88) 100%)' }} />
-        </motion.div>
+        {/* ─── HERO ─── */}
+        <section ref={heroRef} className="relative w-full h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover"
+              poster={HERO_IMG}
+            >
+              <source src="/hero.mp4" type="video/mp4" />
+            </video>
+            <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(15,14,12,0.3) 0%, rgba(15,14,12,0.5) 40%, rgba(15,14,12,0.88) 100%)' }} />
+          </div>
 
         {/* Animated ambient rings */}
         {[1, 2, 3].map((n) => (
