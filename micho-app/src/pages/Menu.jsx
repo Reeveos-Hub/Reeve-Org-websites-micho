@@ -22,11 +22,11 @@ function MenuItem({ item, index }) {
   return (
     <motion.div
       className="menu-item-row"
-      initial={{ opacity: 0, x: -20 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, margin: '-20px' }}
-      transition={{ duration: 0.6, delay: index * 0.04, ease: [0.22, 1, 0.36, 1] }}
-      whileHover={{ x: 6 }}
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-8px' }}
+      transition={{ duration: 0.5, delay: Math.min(index * 0.03, 0.18), ease: [0.25, 0.46, 0.45, 0.94] }}
+      style={{ willChange: 'transform, opacity' }}
     >
       <div className="flex-1 min-w-0">
         <div className="flex items-baseline flex-wrap gap-1">
@@ -40,7 +40,7 @@ function MenuItem({ item, index }) {
       <motion.span
         className="font-sans font-medium text-text-primary text-base flex-shrink-0 ml-6"
         whileHover={{ color: '#C47A3B' }}
-        transition={{ duration: 0.2 }}
+        transition={{ duration: 0.15 }}
       >
         £{item.price.toFixed(2)}
       </motion.span>
@@ -55,7 +55,7 @@ function MenuSectionImage({ src, alt }) {
 
   return (
     <div ref={ref} className="w-full mb-14 overflow-hidden" style={{ height: 'clamp(200px, 32vw, 400px)' }}>
-      <motion.div className="w-full h-full" style={{ y, scale: 1.18 }}>
+      <motion.div className="w-full h-full" style={{ y, scale: 1.18, willChange: 'transform' }}>
         <img src={src} alt={alt} className="w-full h-full object-cover" loading="lazy" />
         <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, transparent 70%, rgba(15,14,12,0.6) 100%)' }} />
       </motion.div>
@@ -101,7 +101,7 @@ function ParallaxHero() {
 
   return (
     <section ref={ref} className="relative flex items-end justify-start overflow-hidden" style={{ height: '55vh', minHeight: '340px' }}>
-      <motion.div className="absolute inset-0" style={{ y, scale: 1.2 }}>
+        <motion.div className="absolute inset-0" style={{ y, scale: 1.2, willChange: 'transform' }}>
         <img src={HERO_IMG} alt="Micho menu" className="w-full h-full object-cover" />
         <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(15,14,12,0.15), rgba(15,14,12,0.88))' }} />
       </motion.div>

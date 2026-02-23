@@ -28,20 +28,21 @@ export default function ScrollReveal({
   const hidden = { opacity: 0, ...vectors[direction] }
   const visible = { opacity: 1, y: 0, x: 0, scale: 1 }
 
-  return (
-    <motion.div
-      className={className}
-      initial={hidden}
-      whileInView={visible}
-      viewport={{ once, margin: '-50px' }}
-      transition={{
-        duration,
-        delay,
-        ease: [0.16, 1, 0.3, 1],
-      }}
-      {...props}
-    >
-      {children}
-    </motion.div>
-  )
+    return (
+      <motion.div
+        className={className}
+        initial={hidden}
+        whileInView={visible}
+        viewport={{ once, margin: '-40px' }}
+        transition={{
+          duration,
+          delay,
+          ease: [0.25, 0.46, 0.45, 0.94],
+        }}
+        style={{ willChange: 'transform, opacity' }}
+        {...props}
+      >
+        {children}
+      </motion.div>
+    )
 }

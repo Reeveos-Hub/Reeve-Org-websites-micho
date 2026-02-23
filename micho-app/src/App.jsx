@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react'
+import React, { Suspense, lazy, useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import Navbar from './components/Navbar'
@@ -23,11 +23,20 @@ function PageFallback() {
   )
 }
 
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+  }, [pathname])
+  return null
+}
+
 export default function App() {
   const location = useLocation()
 
   return (
     <div className="relative min-h-screen bg-bg-primary text-text-primary overflow-x-hidden">
+      <ScrollToTop />
       <FloatingDecorations />
       <Navbar />
       <PromoBanner />
