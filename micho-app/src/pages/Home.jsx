@@ -210,7 +210,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.8, duration: 0.6 }}
           >
-            <Link to="/reservations" className="btn-copper">Book a Table</Link>
+            <a href="https://web.dojo.app/create_booking/vendor/IMRbX5h6TDitS4ia5XT3HxTvOdSiYmbC-xwiQb1-icM_restaurant" target="_blank" rel="noopener noreferrer" className="btn-copper">Book a Table</a>
             <Link to="/menu" className="btn-outline">Explore Menu</Link>
           </motion.div>
         </motion.div>

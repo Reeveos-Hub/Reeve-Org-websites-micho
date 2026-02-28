@@ -2,12 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { neighbourhoods } from '../data/neighbourhoods'
 
+const BOOKING_URL = 'https://web.dojo.app/create_booking/vendor/IMRbX5h6TDitS4ia5XT3HxTvOdSiYmbC-xwiQb1-icM_restaurant'
+
 const footerLinks = [
   { label: 'Welcome', to: '/' },
   { label: 'Our Menu', to: '/menu' },
   { label: 'Our Story', to: '/about' },
   { label: 'Collection', to: '/collection' },
-  { label: 'Reservations', to: '/reservations' },
+  { label: 'Reservations', to: BOOKING_URL, external: true },
 ]
 
 const socialLinks = [
@@ -48,13 +50,25 @@ export default function Footer() {
             </p>
             <nav className="flex flex-col gap-3">
               {footerLinks.map((link) => (
-                <Link
-                  key={link.to}
-                  to={link.to}
-                  className="font-sans text-sm text-text-muted hover:text-text-primary transition-colors duration-200"
-                >
-                  {link.label}
-                </Link>
+                link.external ? (
+                  <a
+                    key={link.to}
+                    href={link.to}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-sans text-sm text-text-muted hover:text-text-primary transition-colors duration-200"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.to}
+                    to={link.to}
+                    className="font-sans text-sm text-text-muted hover:text-text-primary transition-colors duration-200"
+                  >
+                    {link.label}
+                  </Link>
+                )
               ))}
             </nav>
           </div>

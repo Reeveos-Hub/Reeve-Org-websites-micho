@@ -3,12 +3,14 @@ import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X } from 'lucide-react'
 
+const BOOKING_URL = 'https://web.dojo.app/create_booking/vendor/IMRbX5h6TDitS4ia5XT3HxTvOdSiYmbC-xwiQb1-icM_restaurant'
+
 const navLinks = [
   { label: 'Welcome', to: '/' },
   { label: 'Our Menu', to: '/menu' },
   { label: 'Our Story', to: '/about' },
   { label: 'Collection', to: '/collection' },
-  { label: 'Reservations', to: '/reservations' },
+  { label: 'Reservations', to: BOOKING_URL, external: true },
 ]
 
 const connectLinks = [
@@ -60,13 +62,15 @@ function NavOverlay({ isOpen, onClose }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.4 }}
           >
-            <Link
-              to="/reservations"
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={onClose}
               className="inline-block bg-accent-copper text-bg-primary font-sans font-semibold uppercase tracking-label text-sm px-8 py-4 hover:bg-accent-gold transition-all duration-300"
             >
               Book Now
-            </Link>
+            </a>
           </motion.div>
 
           {/* Links columns */}
@@ -82,13 +86,25 @@ function NavOverlay({ isOpen, onClose }) {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.15 + i * 0.05, duration: 0.4 }}
                   >
-                    <Link
-                      to={link.to}
-                      onClick={onClose}
-                      className="font-serif font-light text-4xl md:text-5xl text-text-primary hover:text-accent-copper transition-colors duration-300 block leading-tight py-1"
-                    >
-                      {link.label}
-                    </Link>
+                    {link.external ? (
+                      <a
+                        href={link.to}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={onClose}
+                        className="font-serif font-light text-4xl md:text-5xl text-text-primary hover:text-accent-copper transition-colors duration-300 block leading-tight py-1"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link
+                        to={link.to}
+                        onClick={onClose}
+                        className="font-serif font-light text-4xl md:text-5xl text-text-primary hover:text-accent-copper transition-colors duration-300 block leading-tight py-1"
+                      >
+                        {link.label}
+                      </Link>
+                    )}
                   </motion.div>
                 ))}
               </nav>
@@ -178,13 +194,25 @@ export default function Navbar() {
           {/* Desktop nav links */}
           <nav className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className="font-sans text-sm font-medium text-text-muted hover:text-text-primary transition-colors duration-300"
-              >
-                {link.label}
-              </Link>
+              link.external ? (
+                <a
+                  key={link.to}
+                  href={link.to}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-sans text-sm font-medium text-text-muted hover:text-text-primary transition-colors duration-300"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className="font-sans text-sm font-medium text-text-muted hover:text-text-primary transition-colors duration-300"
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
           </nav>
 

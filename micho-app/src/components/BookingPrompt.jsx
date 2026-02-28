@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+const BOOKING_URL = 'https://web.dojo.app/create_booking/vendor/IMRbX5h6TDitS4ia5XT3HxTvOdSiYmbC-xwiQb1-icM_restaurant'
 
 export default function BookingPrompt() {
   return (
@@ -20,12 +20,14 @@ export default function BookingPrompt() {
         <p className="text-text-muted font-sans text-base mb-10">
           Experience authentic Turkish dining in the heart of Crookes, Sheffield.
         </p>
-        <Link
-          to="/reservations"
+        <a
+          href={BOOKING_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="btn-copper inline-block"
         >
           Book Now
-        </Link>
+        </a>
       </motion.div>
     </section>
   )

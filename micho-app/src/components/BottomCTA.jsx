@@ -24,12 +24,14 @@ export default function BottomCTA() {
       >
         Menu
       </Link>
-      <Link
-        to="/reservations"
+      <a
+        href="https://web.dojo.app/create_booking/vendor/IMRbX5h6TDitS4ia5XT3HxTvOdSiYmbC-xwiQb1-icM_restaurant"
+        target="_blank"
+        rel="noopener noreferrer"
         className="flex-1 flex items-center justify-center py-4 bg-accent-copper text-bg-primary font-sans font-semibold uppercase tracking-label text-sm transition-all duration-300 hover:bg-accent-gold"
       >
         Book Now
-      </Link>
+      </a>
     </motion.div>
   )
 }

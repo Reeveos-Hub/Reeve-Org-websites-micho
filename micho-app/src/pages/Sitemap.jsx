@@ -162,7 +162,7 @@ export default function Sitemap() {
             Ready to experience Micho?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/reservations" className="btn-copper">Book a Table</Link>
+            <a href="https://web.dojo.app/create_booking/vendor/IMRbX5h6TDitS4ia5XT3HxTvOdSiYmbC-xwiQb1-icM_restaurant" target="_blank" rel="noopener noreferrer" className="btn-copper">Book a Table</a>
             <Link to="/menu" className="btn-outline">View Menu</Link>
           </div>
         </motion.div>

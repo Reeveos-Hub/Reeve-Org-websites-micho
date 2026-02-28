@@ -254,7 +254,7 @@ export default function About() {
               <p><a href="mailto:info@michoturkishbargrill.co.uk" className="hover:text-accent-copper transition-colors duration-300">info@michoturkishbargrill.co.uk</a></p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/reservations" className="btn-copper inline-block">Book a Table</Link>
+              <a href="https://web.dojo.app/create_booking/vendor/IMRbX5h6TDitS4ia5XT3HxTvOdSiYmbC-xwiQb1-icM_restaurant" target="_blank" rel="noopener noreferrer" className="btn-copper inline-block">Book a Table</a>
               <Link to="/menu" className="btn-outline inline-block">View Menu</Link>
             </div>
           </ScrollReveal>

@@ -111,12 +111,14 @@ export default function LocalLandingPage({ slug }) {
               custom={3}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
-              <Link
-                to="/reservations"
+              <a
+                href="https://web.dojo.app/create_booking/vendor/IMRbX5h6TDitS4ia5XT3HxTvOdSiYmbC-xwiQb1-icM_restaurant"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block font-sans text-xs font-semibold uppercase tracking-[0.18em] text-bg-primary bg-accent-copper px-8 py-4 hover:bg-accent-copper/90 transition-colors duration-200"
               >
                 Book a Table
-              </Link>
+              </a>
               <Link
                 to="/menu"
                 className="inline-block font-sans text-xs font-semibold uppercase tracking-[0.18em] text-accent-copper border border-accent-copper/40 px-8 py-4 hover:border-accent-copper transition-colors duration-200"
@@ -265,12 +267,14 @@ export default function LocalLandingPage({ slug }) {
                 Come taste real Turkish — charcoal grill, fresh meze, and a warm welcome from a family that&apos;s been doing this for 25 years.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/reservations"
+                <a
+                  href="https://web.dojo.app/create_booking/vendor/IMRbX5h6TDitS4ia5XT3HxTvOdSiYmbC-xwiQb1-icM_restaurant"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-block font-sans text-xs font-semibold uppercase tracking-[0.18em] text-bg-primary bg-accent-copper px-8 py-4 hover:bg-accent-copper/90 transition-colors duration-200"
                 >
                   Book a Table
-                </Link>
+                </a>
                 <a
                   href="tel:+441143492043"
                   className="inline-block font-sans text-xs font-semibold uppercase tracking-[0.18em] text-accent-copper border border-accent-copper/40 px-8 py-4 hover:border-accent-copper transition-colors duration-200"
