@@ -166,50 +166,50 @@ export default function Home() {
         ))}
 
         <motion.div className="relative z-10 text-center px-6" style={{ opacity: heroOpacity }}>
-          <motion.p
-            className="section-label mb-6"
-            initial={{ opacity: 0, y: 30, letterSpacing: '0.3em' }}
-            animate={{ opacity: 1, y: 0, letterSpacing: '0.2em' }}
-            transition={{ delay: 0.5, duration: 1, ease: 'easeOut' }}
-          >
-            Authentic Turkish Bar &amp; Grill
-          </motion.p>
-
-          {/* Massive animated title */}
-          <div className="overflow-hidden mb-4">
-            <motion.h1
-              className="font-serif font-light text-text-primary leading-none"
-              style={{ fontSize: 'clamp(80px, 18vw, 200px)', letterSpacing: '0.06em' }}
-              initial={{ y: '100%', opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.3, duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
+            <motion.p
+              className="section-label mb-6"
+              initial={{ opacity: 0, y: 20, letterSpacing: '0.3em' }}
+              animate={{ opacity: 1, y: 0, letterSpacing: '0.2em' }}
+              transition={{ delay: 0.1, duration: 0.7, ease: 'easeOut' }}
             >
-              MICHO
-            </motion.h1>
-          </div>
+              Authentic Turkish Bar &amp; Grill
+            </motion.p>
 
-          <motion.div
-            className="w-24 h-px bg-accent-copper mx-auto mb-6"
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ delay: 1.2, duration: 0.8, ease: 'easeOut' }}
-          />
+            {/* Massive animated title */}
+            <div className="overflow-hidden mb-4">
+              <motion.h1
+                className="font-serif font-light text-text-primary leading-none"
+                style={{ fontSize: 'clamp(80px, 18vw, 200px)', letterSpacing: '0.06em' }}
+                initial={{ y: '100%', opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0, duration: 1.0, ease: [0.16, 1, 0.3, 1] }}
+              >
+                MICHO
+              </motion.h1>
+            </div>
 
-          <motion.p
-            className="font-serif italic text-text-muted text-xl md:text-2xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.4, duration: 0.8 }}
-          >
-            A family table open to everyone
-          </motion.p>
+            <motion.div
+              className="w-24 h-px bg-accent-copper mx-auto mb-6"
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ delay: 0.8, duration: 0.7, ease: 'easeOut' }}
+            />
 
-          <motion.div
-            className="flex gap-4 justify-center mt-10"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.8, duration: 0.6 }}
-          >
+            <motion.p
+              className="font-serif italic text-text-muted text-xl md:text-2xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.0, duration: 0.7 }}
+            >
+              A family table open to everyone
+            </motion.p>
+
+            <motion.div
+              className="flex gap-4 justify-center mt-10"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.3, duration: 0.6 }}
+            >
             <a href="https://web.dojo.app/create_booking/vendor/IMRbX5h6TDitS4ia5XT3HxTvOdSiYmbC-xwiQb1-icM_restaurant" target="_blank" rel="noopener noreferrer" className="btn-copper">Book a Table</a>
             <Link to="/menu" className="btn-outline">Explore Menu</Link>
           </motion.div>
@@ -220,7 +220,7 @@ export default function Home() {
           className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 2.2, duration: 0.8 }}
+          transition={{ delay: 1.6, duration: 0.8 }}
         >
           <motion.span className="font-sans text-xs tracking-widest text-text-muted uppercase">Scroll</motion.span>
           <motion.div
@@ -284,13 +284,15 @@ export default function Home() {
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
           >
-            <img
-              src="/chefs.png"
-              alt="Micho chefs with their dishes"
-              className="w-full h-full object-cover object-top"
-              style={{ maxHeight: '620px' }}
-              loading="lazy"
-            />
+              <img
+                src="/chefs.png"
+                alt="Micho chefs with their dishes"
+                className="w-full h-full object-cover object-top"
+                style={{ maxHeight: '620px' }}
+                loading="lazy"
+                width="800"
+                height="620"
+              />
             {/* subtle bottom fade to blend with background */}
             <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to bottom, transparent 70%, rgba(15,14,12,0.4) 100%)' }} />
           </motion.div>
@@ -456,12 +458,14 @@ export default function Home() {
                 style={{ gridColumn: col, gridRow: row }}
                 variants={{ hidden: { opacity: 0, scale: 0.97 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.85, ease: [0.22, 1, 0.36, 1] } } }}
               >
-                <img
-                  src={src}
-                  alt={alt}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  loading="lazy"
-                />
+        <img
+          src={src}
+          alt={alt}
+          className="w-full h-full object-cover"
+          loading="lazy"
+          width="1600"
+          height="700"
+        />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
               </motion.div>
             ))}
@@ -541,12 +545,14 @@ export default function Home() {
               }}
               whileHover={{ scale: 1.03, zIndex: 2 }}
             >
-              <img
-                src={src}
-                alt="Instagram post"
-                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-115 group-hover:brightness-75"
-                loading="lazy"
-              />
+                <img
+                  src={src}
+                  alt="Instagram post"
+                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-115 group-hover:brightness-75"
+                  loading="lazy"
+                  width="400"
+                  height="400"
+                />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-400">
                 <motion.div
                   initial={{ scale: 0.5, opacity: 0 }}

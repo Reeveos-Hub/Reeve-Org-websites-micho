@@ -57,7 +57,7 @@ function MenuSectionImage({ src, alt }) {
   return (
     <div ref={ref} className="w-full mb-14 overflow-hidden" style={{ height: 'clamp(200px, 32vw, 400px)' }}>
       <motion.div className="w-full h-full" style={{ y, scale: 1.18, willChange: 'transform' }}>
-        <img src={src} alt={alt} className="w-full h-full object-cover" loading="lazy" />
+        <img src={src} alt={alt} className="w-full h-full object-cover" loading="lazy" width="1400" height="400" />
         <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, transparent 70%, rgba(15,14,12,0.6) 100%)' }} />
       </motion.div>
     </div>
@@ -103,7 +103,7 @@ function ParallaxHero() {
   return (
     <section ref={ref} className="relative flex items-end justify-start overflow-hidden" style={{ height: '55vh', minHeight: '340px' }}>
         <motion.div className="absolute inset-0" style={{ y, scale: 1.2, willChange: 'transform' }}>
-        <img src={HERO_IMG} alt="Micho menu" className="w-full h-full object-cover" />
+        <img src={HERO_IMG} alt="Micho menu" className="w-full h-full object-cover" fetchpriority="high" width="1600" height="900" />
         <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(15,14,12,0.15), rgba(15,14,12,0.88))' }} />
       </motion.div>
       <motion.div className="relative z-10 px-8 md:px-14 pb-14 max-w-2xl" style={{ opacity }}>
@@ -188,8 +188,8 @@ export default function Menu() {
       {/* Sticky category tabs */}
       <div
         ref={tabsRef}
-        className="sticky z-30 py-3 px-4"
-        style={{ top: '64px', background: 'rgba(15,14,12,0.97)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(196,122,59,0.15)' }}
+        className="sticky z-30 py-3 px-4 relative"
+          style={{ top: '64px', background: 'rgba(15,14,12,0.97)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(196,122,59,0.15)' }}
       >
         <div className="flex gap-1 overflow-x-auto pb-1" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
           {categories.map((cat) => (
