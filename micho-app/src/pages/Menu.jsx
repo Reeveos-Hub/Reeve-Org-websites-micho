@@ -67,7 +67,6 @@ function MenuSectionImage({ src, alt }) {
 function MenuSection({ category, data }) {
   return (
     <section id={`cat-${category.replace(/\s+/g, '-').toLowerCase()}`} className="mb-28">
-      {data.image && <MenuSectionImage src={data.image} alt={category} />}
       <div className="max-w-screen-md mx-auto px-6">
         <ScrollReveal direction="left" distance={50} duration={1.0}>
           <div className="flex items-center gap-6 mb-3">
