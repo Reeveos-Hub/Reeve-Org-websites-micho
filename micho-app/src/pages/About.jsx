@@ -14,7 +14,7 @@ const values = [
   { label: 'Authenticity', text: 'Every recipe is rooted in Turkish culinary tradition. We source ingredients that honour the flavours of Anatolia — from hand-selected spices to the wood that fuels our charcoal grill.' },
   { label: 'Family',       text: "Micho was born from a family's love of cooking and sharing. That spirit lives in every dish — generous portions, warm service, and a table that always has room for one more." },
   { label: 'Craft',        text: 'Over 25 years of honing techniques passed down through generations. Our köfte is hand-shaped, our börek is hand-rolled, and our grill is tended with the care it deserves.' },
-  { label: 'Community',    text: "Rooted in Sheffield's Crookes neighbourhood, we are proud to be part of the fabric of this city. Our guests are our community — and community is why we cook." },
+  { label: 'Community',    text: "Having successfully run restaurants in London and Sheffield over the past 25 years, Micho has found a new home in the heart of the Crookes community — and we're here for another success story. Our guests are our community, and community is why we cook." },
 ]
 
 
